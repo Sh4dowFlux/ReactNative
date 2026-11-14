@@ -27,19 +27,19 @@ const TarjetaEstudio = ({ titulo, institucion, anio, enCurso }: Props) => {
 export default TarjetaEstudio;
 
 const estilos = StyleSheet.create({
-  tarjeta: { padding: 15, borderRadius: 10, marginVertical: 8, borderWidth: 1 },
+  tarjeta: { padding: 16, borderRadius: 10, marginVertical: 8, borderWidth: 1 },
   finalizado: { backgroundColor: "#ffffff", borderColor: "#ccc" },
   enCurso: { backgroundColor: "#eef2ff", borderColor: "#6366f1" },
   headerTarjeta: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  titulo: { fontSize: 15, fontWeight: "bold", color: "#0f172a" },
-  subtitulo: { fontSize: 13, color: "#555", marginTop: 4 },
-  anio: { fontSize: 11, color: "#888", marginTop: 2 },
+  titulo: { fontSize: 16, fontWeight: "bold", color: "#0f172a" },
+  subtitulo: { fontSize: 14, color: "#555", marginTop: 4 },
+  anio: { fontSize: 12, color: "#888", marginTop: 2 },
   // Estilo de cápsula morada exigido en el reto:
   badgeContainer: {
     backgroundColor: "#6366f1",
-    paddingHorizontal: 5,
-    paddingVertical: 2,
-    borderRadius: 10,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 12,
   },
-  badge: { color: "#ffffff", fontWeight: "bold", fontSize: 9 },
+  badge: { color: "#ffffff", fontWeight: "bold", fontSize: 10 },
 });
