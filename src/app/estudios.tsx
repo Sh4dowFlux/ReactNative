@@ -7,28 +7,28 @@ export default function EstudiosScreen() {
     <ScrollView style={estilos.contenedor} contentContainerStyle={estilos.contenido}>
       <View style={estilos.headerContenedor}>
         <Ionicons name="school" size={60} color="#2563eb" />
-        <Text style={estilos.nombre}>Pepito Pérez Gómez</Text>
+        <Text style={estilos.nombre}>Santiago Pérez Gómez</Text>
         <Text style={estilos.subtituloHeader}>Estudios Realizados</Text>
       </View>
 
       <TarjetaEstudio
         titulo="Bachiller"
         institucion="Institución Educativa Municipal"
-        anio={2015}
+        anio={2010}
         enCurso={false}
       />
 
       <TarjetaEstudio
         titulo="Técnico en Sistemas"
         institucion="Colegio ABC"
-        anio={2018}
+        anio={2011}
         enCurso={false}
       />
 
       <TarjetaEstudio
-        titulo="Tecnólogo en ADSO"
+        titulo="Tecnico en ADSO"
         institucion="SENA"
-        anio={2026}
+        anio={2022}
         enCurso={true}
       />
     </ScrollView>
