@@ -19,7 +19,7 @@ const Inicio = () => {
     <ScrollView style={estilos.contenedor} contentContainerStyle={estilos.contenido}>
       <View style={estilos.avatarContenedor}>
         <Ionicons name="person-circle" size={100} color="#2563eb" />
-        <Text style={estilos.nombre}>Pepito Pérez Gómez</Text>
+        <Text style={estilos.nombre}>Santiago Pérez Gómez</Text> 
         <Text style={estilos.profesion}>Tecnólogo en ADSO</Text>
       </View>
 
