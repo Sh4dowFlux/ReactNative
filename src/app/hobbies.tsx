@@ -1,49 +1,35 @@
-import { Platform, ScrollView, StyleSheet, Text } from "react-native";
-import { Alert } from "react-native";
-import TarjetaHobby from "../components/TarjetaHobby";
+import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export default function HobbiesScreen() {
-  const mostrarDetalle = (hobby: string, detalle: string) => {
-    if (Platform.OS === "web") {
-      window.alert(`${hobby}\n\n${detalle}`);
-    } else {
-      Alert.alert(hobby, detalle);
-    }
-  };
+type Props = {
+  titulo: string;
+  icono: keyof typeof Ionicons.glyphMap;
+  onPress: () => void;
+};
 
+const TarjetaHobby = ({ titulo, icono, onPress }: Props) => {
   return (
-    <ScrollView style={estilos.contenedor} contentContainerStyle={estilos.contenido}>
-      <Text style={estilos.tituloSeccion}>Mis Pasatiempos</Text>
-
-      <TarjetaHobby
-        titulo="Programar videojuegos indie"
-        icono="game-controller-outline"
-        onPress={() => mostrarDetalle("Videojuegos Indie", "Me encanta diseñar pequeños juegos en Godot y Python durante mi tiempo libre.")}
-      />
-
-      <TarjetaHobby
-        titulo="Leer libros de ciencia ficción"
-        icono="book-outline"
-        onPress={() => mostrarDetalle("Lectura", "Fanático de autores como Isaac Asimov y de las novelas de ciberpunk.")}
-      />
-
-      <TarjetaHobby
-        titulo="Escuchar música Lofi y Rock"
-        icono="headset-outline"
-        onPress={() => mostrarDetalle("Música", "La música es mi compañera ideal mientras escribo código y desarrollo apps.")}
-      />
-
-      <TarjetaHobby
-        titulo="Salir a montar bicicleta"
-        icono="bicycle-outline"
-        onPress={() => mostrarDetalle("Ciclismo", "Practico rutas de montaña los fines de semana para despejar la mente.")}
-      />
-    </ScrollView>
+    <TouchableOpacity style={estilos.tarjeta} onPress={onPress} activeOpacity={0.7}>
+      <Ionicons name={icono} size={28} color="#2563eb" style={estilos.icono} />
+      <Text style={estilos.titulo}>{titulo}</Text>
+      <Ionicons name="chevron-forward" size={20} color="#94a3b8" />
+    </TouchableOpacity>
   );
-}
+};
+
+export default TarjetaHobby;
 
 const estilos = StyleSheet.create({
-  contenedor: { flex: 1, backgroundColor: "#f8fafc" },
-  contenido: { padding: 20 },
-  tituloSeccion: { fontSize: 18, fontWeight: "bold", color: "#1e293b", marginBottom: 12 },
+  tarjeta: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    padding: 16,
+    borderRadius: 10,
+    marginVertical: 8,
+    borderWidth: 1,
+    borderColor: "#e2e8f0",
+  },
+  icono: { marginRight: 14 },
+  titulo: { flex: 1, fontSize: 15, fontWeight: "600", color: "#0f172a" },
 });

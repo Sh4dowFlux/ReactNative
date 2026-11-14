@@ -9,8 +9,10 @@ export default function Layout() {
         options={{
           title: "Inicio",
           headerTitle: "Datos Personales",
-          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="person-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size }: any) => (
+            <>
+              <Ionicons name="person-outline" size={size} color={color} />
+            </>
           ),
         }}
       />
@@ -19,8 +21,10 @@ export default function Layout() {
         options={{
           title: "Estudios",
           headerTitle: "Formación Académica",
-          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="school-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size }: any) => (
+            <>
+              <Ionicons name="school-outline" size={size} color={color} />
+            </>
           ),
         }}
       />
@@ -29,8 +33,10 @@ export default function Layout() {
         options={{
           title: "Experiencia",
           headerTitle: "Experiencia Laboral",
-          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="briefcase-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size }: any) => (
+            <>
+              <Ionicons name="briefcase-outline" size={size} color={color} />
+            </>
           ),
         }}
       />
@@ -39,8 +45,10 @@ export default function Layout() {
         options={{
           title: "Hobbies",
           headerTitle: "Intereses y Hobbies",
-          tabBarIcon: ({ color, size }: { color: string; size: number }) => (
-            <Ionicons name="heart-outline" size={size} color={color} />
+          tabBarIcon: ({ color, size }: any) => (
+            <>
+              <Ionicons name="heart-outline" size={size} color={color} />
+            </>
           ),
         }}
       />
