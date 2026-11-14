@@ -19,7 +19,7 @@ const Inicio = () => {
     <ScrollView style={estilos.contenedor} contentContainerStyle={estilos.contenido}>
       <View style={estilos.avatarContenedor}>
         <Ionicons name="person-circle" size={100} color="#2563eb" />
-        <Text style={estilos.nombre}>Santiago Pérez Gómez</Text> 
+        <Text style={estilos.nombre}>Pepito Pérez Gómez</Text> 
         <Text style={estilos.profesion}>Tecnólogo en ADSO</Text>
       </View>
 
@@ -71,6 +71,39 @@ const Inicio = () => {
           nombreIcono="school"
           colorBoton="#EA7066"
           onPress={() => router.push("/estudios")}
+        />
+                <MiBoton
+          textoBoton="Llamar"
+          nombreIcono="call"
+          colorBoton="#5B80E8"
+          onPress={() =>
+            mostrarAlerta("Teléfono", "Celular: +57 300 123 4567")
+          }
+        />
+        <MiBoton
+          textoBoton="Ver Perfil LinkedIn"
+          nombreIcono="logo-linkedin"
+          colorBoton="#EA7066"
+          onPress={() =>
+            mostrarAlerta("LinkedIn", "linkedin.com/in/pepito-perez-adso")
+          }
+        />
+        <MiBoton
+          textoBoton="GitHub / Repositorios"
+          nombreIcono="logo-github"
+          colorBoton="#1E293B"
+          onPress={() =>
+            mostrarAlerta("GitHub", "github.com/pepitoperez-dev")
+          }
+        />
+        <MiBoton
+          textoBoton="Ir a Estudios"
+          nombreIcono="school"
+          colorBoton="#EA7066"
+          onPress={() => router.push("/estudios")}
+          
+
+          
         />
       </View>
     </ScrollView>
